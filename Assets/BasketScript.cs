@@ -6,12 +6,14 @@ public class BasketScript : MonoBehaviour
 {
     [Header("Set Dynamically")]
     public Text scoreGT;
+
     // Start is called before the first frame update
     void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         scoreGT = scoreGO.GetComponent<Text>();
         scoreGT.text = "0";
+ 
     }
 
     // Update is called once per frame
@@ -29,10 +31,10 @@ public class BasketScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject collideWith = collision.gameObject;
-        if (collideWith.tag == "Apple")
+        GameObject collidedWith = collision.gameObject;
+        if (collidedWith.tag == "Apple")
         {
-            Destroy(collideWith);
+            Destroy(collidedWith);
 
             int score = int.Parse(scoreGT.text);
             score += 100;
