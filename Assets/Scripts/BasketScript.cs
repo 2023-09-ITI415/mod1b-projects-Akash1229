@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BasketScript : MonoBehaviour
 {
     [Header("Set Dynamically")]
-    public Text scoreGT;
+    public static TMP_Text scoreGT;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
-        scoreGT = scoreGO.GetComponent<Text>();
+        scoreGT = scoreGO.GetComponent<TMP_Text>();
         scoreGT.text = "0";
  
     }
@@ -40,9 +42,9 @@ public class BasketScript : MonoBehaviour
             score += 100;
             scoreGT.text = score.ToString();
 
-            if (score > HighScore.score)
+            if (score > HighScoreScript.score)
             {
-                HighScore.score = score;
+                HighScoreScript.score = score;
             }
         }
     }

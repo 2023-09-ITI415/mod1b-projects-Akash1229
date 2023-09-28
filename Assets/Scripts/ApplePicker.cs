@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ApplePicker : MonoBehaviour
 {
@@ -38,7 +40,7 @@ public class ApplePicker : MonoBehaviour
 
         if (basketList.Count == 0)
         {
-            SceneManager.LoadScene("-Scene_0");
+            SceneManager.LoadScene("ApplePicker-AkashPatel");
         }
     }
 }

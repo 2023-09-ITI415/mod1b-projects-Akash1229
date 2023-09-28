@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ScoreCounter:
+  m_text: 'ScoreCounter: 0
 
 
 '
